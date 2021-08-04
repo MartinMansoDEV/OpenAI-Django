@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'OpenAI/img/openai-avatar.png' %}" />
+    <title>CHAT</title>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'OpenAI/css/main.css' %}">
+    <script src="{% static 'OpenAI/js/main.js' %}"></script>
+    <script>
+        const openai_avatar = "{% static 'OpenAI/img/openai-avatar.png' %}";
+        const user_avatar = "{% static 'OpenAI/img/user-icon.png' %}";
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="px-2 scroll" id="messages-container">
+                <div class="d-flex align-items-center">
+                    <div class="text-left pr-1"><img src="{% static 'OpenAI/img/openai-avatar.png' %}"
+                            width="30" class="img1" /></div> 
+                    <div class="pr-2 pl-1"> <span class="name">OpenAI</span>
+                        <p class="msg">Hi You, What do you want to do today?</p>
+                    </div>
+                </div>
+            </div>
+            <span class="name pl-1" id="ho-is"></span>
+            <nav class="navbar bg-white navbar-expand-sm d-flex justify-content-between"> 
+                <input type="text number" id="input-openai" class="form-control" placeholder="Type a message...">
+                <div class="icondiv d-flex justify-content-end align-content-center text-center ml-2"> 
+                    <i id="send-msg" class="fa fa-arrow-circle-right icon2"></i> 
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
